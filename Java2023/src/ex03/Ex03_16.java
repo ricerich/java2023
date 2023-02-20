@@ -6,12 +6,9 @@ public class Ex03_16 {
 
 	public static void main(String[] args) 
 	{
-		String str [] = {"가위", "바위", "보"};
-		
 		Scanner sc1 = new Scanner(System.in);
 		
 		System.out.println("컴퓨터와 가위바위보 게임을 합니다!");
-		
 		
 		while(true)
 		{
@@ -24,6 +21,7 @@ public class Ex03_16 {
 				break;
 			}
 			
+			String str [] = {"가위", "바위", "보"};
 			int n = (int)(Math.random()*3); //컴퓨터가 낸것을 랜덤하게 선택
 			String com1 = str[n];
 			
