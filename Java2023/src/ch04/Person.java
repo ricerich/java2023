@@ -23,32 +23,81 @@ public class Person
 		name = "홍길동";
 		age = 20;
 		height = 150.5f;
+		
+//		printPerson();
 	}
 	
 	//3.메소드
-	void addAge(int a)
+	
+	//modifyAge();//안됨! 클래스 땅
+	
+	private void modifyAge()
 	{
-		age = age + a;
+		age=age-2;
 	}
 	
-	void setAge(int age1)
+	public void addAge()
+	{
+		age++;
+	}
+		
+	public void addAge(int plus)
+	{
+		age = age + plus;
+	}
+	
+	public void addAge(float plus)
+	{
+		age++;
+		height = height + plus;
+		
+	}
+	
+	public void addAge(int plus, String nickname)
+	{
+		age = age + plus;
+		System.out.println(nickname);
+	}
+	
+	
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setAge(int age1)
 	{
 		age = age1;
+		modifyAge();
 	}
 	
-	String getName()
+	public void setHeight(float height1)
+	{
+		height = height1;
+	}
+	
+	
+	public String getName()
 	{
 		return name;
 	}
 	
-	int getAge()
+	public int getAge()
 	{
+		modifyAge();
 		return age;
 	}
 	
-	float getHeight()
+	public float getHeight()
 	{
 		return height;
+	}
+	
+	//출력용 메소드
+	public void printPerson()
+	{
+		System.out.println(name+"의 나이는 "+age+"입니다");
 	}
 
 }
