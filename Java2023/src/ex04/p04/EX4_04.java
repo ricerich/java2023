@@ -1,4 +1,4 @@
-package ex04.p4;
+package ex04.p04;
 
 public class EX4_04 
 {

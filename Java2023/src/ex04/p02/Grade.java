@@ -1,4 +1,4 @@
-package ex04.p2;
+package ex04.p02;
 
 public class Grade {
 
