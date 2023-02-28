@@ -13,28 +13,28 @@ public class EX4_11 {
 		String op1 = sc1.next();
 		char ch1 = op1.charAt(0);
 		
-		Calc obj1;
+		//Calc obj1;
 		switch(ch1)
 		{
 			case '+':
-				obj1 = new Add();
+				Add obj1 = new Add();
 				obj1.setValue(a, b);
 				System.out.println(obj1.calculate());
-				
+				break;
 			case '-':
-				obj1 = new Sub();
-				obj1.setValue(a, b);
-				System.out.println(obj1.calculate());
+				Sub obj2 = new Sub();
+				obj2.setValue(a, b);
+				System.out.println(obj2.calculate());
 				break;
 			case '*':
-				obj1 = new Mult();
-				obj1.setValue(a, b);
-				System.out.println(obj1.calculate());
+				Mult obj3 = new Mult();
+				obj3.setValue(a, b);
+				System.out.println(obj3.calculate());
 				break;
 			case '/':
-				obj1 = new Div();
-				obj1.setValue(a, b);
-				System.out.println(obj1.calculate());
+				Div obj4 = new Div();
+				obj4.setValue(a, b);
+				System.out.println(obj4.calculate());
 				break;
 			default:
 				System.out.println("연산자를 잘못 입력하셨습니다");
