@@ -48,8 +48,6 @@ public class GraphicEditor
 				default:
 			}
 		}
-		
-		
 	}
 	
 	void insert(int type) {
@@ -78,14 +76,47 @@ public class GraphicEditor
 			last.setNext(obj);
 			last = obj;
 		}
-			
-			
-		last = obj;
 	}
 	
 	void delete(int postion)
 	{
+		Shape current = start;
+		Shape previous = start;
 		
+		if(start == null)
+			return;
+		
+		if(start == last)
+		{
+			start = null;
+			last = null;
+			return;
+		}
+		
+		for(int i=0;i<postion;i++)
+		{
+			previous = current;
+			current = current.getNext();
+			
+			if(current == null) //마지막이면
+				return;
+		}
+		
+		if(current == start)
+			start = start.getNext();
+		else if(current == last)
+		{
+			last = previous;
+			last.setNext(null);
+		}
+		else
+		{
+//			previous.next = current.next;
+			previous.setNext(current.getNext());
+		}
+		
+			
+			
 	}
 	
 	void view()
